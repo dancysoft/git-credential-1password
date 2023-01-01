@@ -29,6 +29,9 @@ On Arch Linux the following packages are available at the AUR:
 - `git-credential-1password-bin`: The latest release (prebuild)
 - `git-credential-1password-git`: Builds the current `main` branch
 
+### NixOS
+With Nix or NixOS, the package is available as `git-credential-1password` from recent releases of `nixpkgs`.
+
 ### From Source
 
 ```shell script
