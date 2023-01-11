@@ -24,6 +24,7 @@ func getTTYPath() (string, error) {
 
 	switch runtime.GOOS {
 	case "darwin":
+		fallthrough
 	case "linux":
 		ttyPath = "/dev/tty"
 	case "windows":
