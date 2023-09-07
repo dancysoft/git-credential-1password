@@ -38,6 +38,10 @@ func getTTYPath() (string, error) {
 
 // Login to 1password.
 func (c *Client) Login(timeout uint) error { //nolint:funlen,gocyclo // TODO: refactor
+	if c.NoSignin {
+		return nil
+	}
+
 	var err error
 	c.token, err = git.GetFromCache(c.Account)
 

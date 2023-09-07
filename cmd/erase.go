@@ -35,8 +35,9 @@ func deleteCredentials(r io.Reader) error {
 	}
 
 	c := onepassword.Client{
-		Account: account,
-		Vault:   vault,
+		Account:  account,
+		Vault:    vault,
+		NoSignin: noSignin,
 	}
 
 	if err := c.Login(cache); err != nil {

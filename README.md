@@ -48,6 +48,13 @@ Move the built binary (inside the `bin` directory) to somewhere in your PATH.
 git config --global credential.helper '!git-credential-1password'
 ```
 
+If you've enabled 1Password CLI system authentication integration, you
+may need to add the `--no-signin` flag for proper operation:
+
+```shell script
+git config --global credential.helper '!git-credential-1password --no-signin'
+```
+
 ## Support
 
 This project is maintained by [@develerik](https://github.com/develerik). Please understand that we won't be able to

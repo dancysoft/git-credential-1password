@@ -6,10 +6,11 @@ import (
 )
 
 var (
-	account string
-	cache   uint
-	archive bool
-	vault   string
+	account  string
+	cache    uint
+	archive  bool
+	vault    string
+	noSignin bool
 )
 
 // rootCmd represents the base command when called without any subcommands.
@@ -67,6 +68,9 @@ func Execute() error {
 
 	rootCmd.PersistentFlags().StringVarP(&vault, "vault", "v", "",
 		"the vault to use for your git credentials")
+
+	rootCmd.PersistentFlags().BoolVar(&noSignin, "no-signin", false,
+		"Skip the 'op signin' step.  Use this option if you've enabled 1Password CLI system authentication integration")
 
 	return rootCmd.Execute()
 }
